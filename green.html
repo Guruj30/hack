@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Health Status</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+background:green;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+font-family:Arial;
+color:white;
+}
+
+/* blinking only for home symbol */
+
+@keyframes blink{
+0%{opacity:1;}
+50%{opacity:0;}
+100%{opacity:1;}
+}
+
+.symbol{
+font-size:120px;
+animation:blink 1s infinite;
+}
+
+.message{
+font-size:38px;
+font-weight:bold;
+margin-top:20px;
+}
+
+.sub{
+font-size:20px;
+margin-top:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div>
+
+<div class="symbol">🏠</div>
+
+<div class="message">
+SAFE CONDITION
+</div>
+
+<div class="sub">
+Mild symptoms detected.<br>
+Home remedies and rest are recommended.
+</div>
+
+</div>
+
+</body>
+</html>

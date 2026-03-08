@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Offline Consultation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Offline Consultation</h1>
+        <p>No internet required for processing.</p>
+        
+        <form action="/offline" method="POST">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name" placeholder="Enter your name" required></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="number" name="age" placeholder="Enter age" required></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <select name="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Symptoms</td>
+                    <td>
+                        <textarea name="symptoms" placeholder="e.g. fever, chest pain, cold" required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Duration (Days)</td>
+                    <td><input type="number" name="days" placeholder="How many days?" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="submit" class="submit">Analyze Offline</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>

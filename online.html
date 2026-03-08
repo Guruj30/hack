@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online AI Consultation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Online AI Triage</h1>
+        <p>Powered by Grok API for advanced diagnosis.</p>
+
+        <form action="/online" method="POST">
+            <table>
+                <tr>
+                    <td>Full Name</td>
+                    <td><input type="text" name="name" placeholder="Patient Name" required></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="number" name="age" required></td>
+                </tr>
+                <tr>
+                    <td>Symptoms</td>
+                    <td>
+                        <textarea name="symptoms" rows="4" placeholder="Describe how you feel in detail..." required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>History</td>
+                    <td><input type="text" name="history" placeholder="Any previous illness?"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="submit" style="background-color: #007bff; color: white;">Consult Grok AI</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br>
+        <a href="/">Back to home</a>
+    </div>
+</body>
+</html>
